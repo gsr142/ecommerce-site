@@ -20,6 +20,7 @@ async function syncBeforeStart () {
   let productTag = ProductTag.sync().then(() => console.log('ProductTag synced'));
 
   await new Promise((resolve, reject) => setTimeout(resolve, 1000));
+  // Turn on the server
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`)
   });
@@ -27,5 +28,5 @@ async function syncBeforeStart () {
 }
 syncBeforeStart()   
 
-// Turn on the server
+
 
